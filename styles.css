@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container1 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 20px; /* Smaller size */
+    height: 20px; /* Smaller size */
+    background-color: #3498db;
+    border-radius: 50%;
+    transition: transform 0.1s;
+}
+
+.box {
+    position: absolute;
+    width: 20px; /* Smaller size */
+    height: 20px; /* Smaller size */
+    background-color: #e74c3c;
+    transition: transform 0.5s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.navbar button:hover {
+    background-color: #ff4500;
+}
+
+.navbar a {
+    color: rgb(183, 255, 225);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #34495e;
+}
+
+.score {
+    font-size: 20px;
+    color: #2ecc71;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px; /* Adjust for fixed navbar */
+    position: relative;
+}
+
+#gameCanvas {
+    background-color: white;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.progress-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: width 1s; /* Slow transition */
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+.menu-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.menu-box h1 {
+    margin-bottom: 20px;
+}
+
+.menu-box p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.menu-box button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu-box button:hover {
+    background-color: #2980b9;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 60px; /* Adjust for fixed navbar */
+}
+
+.game-link {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.game-link:hover {
+    transform: scale(1.05);
+}
+
+.game-link h2 {
+    margin: 0 0 10px 0;
+}
+
+.game-link p {
+    margin: 0;
+    font-size: 18px;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+}

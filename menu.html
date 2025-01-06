@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>X</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>X</h1>
+        <button id="homeButton">Home</button>
+    </nav>
+    <div class="menu-container">
+        <div class="menu-box">
+            <h1>Game Over</h1>
+            <p>Your score: <span id="finalScore"></span></p>
+            <button id="retryButton">Retry</button>
+            <button id="homeButton">Home</button>
+            <button id="exitButton">Exit</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('finalScore').textContent = localStorage.getItem('finalScore');
+        document.getElementById('retryButton').addEventListener('click', () => {
+            window.location.href = 'game.html';
+        });
+        document.getElementById('homeButton').addEventListener('click', () => {
+            window.location.href = 'index.html'; // Assuming index.html is the home page
+        });
+        document.getElementById('exitButton').addEventListener('click', () => {
+            window.location.href = 'index.html'; // Redirect to home page
+        });
+    </script>
+</body>
+</html>

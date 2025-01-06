@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game World</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0db4f;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f0db4f;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+        }
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .cta {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f0db4f;
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        .cta:hover {
+            background-color: #d4b235;
+        }
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .feature-cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #222;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        .game-section {
+            padding: 50px 20px;
+            background-color: #111;
+            text-align: center;
+        }
+        .game-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .game-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .game-card {
+            background: #222;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .game-card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        .about {
+            padding: 50px 20px;
+            background: #222;
+            color: #ccc;
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .contact {
+            padding: 50px 20px;
+            background: #111;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact button {
+            padding: 10px 20px;
+            background-color: #f0db4f;
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        .contact button:hover {
+            background-color: #d4b235;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Game World</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#game-section">Games</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Game World</h1>
+        <p>Your ultimate destination for epic adventures and thrilling gameplay.</p>
+        <a href="#game-section" class="cta">Explore Now</a>
+    </section>
+
+    <section class="features">
+        <h2>Featured Games</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Game 1">
+                <h3>Game Title 1</h3>
+                <p>Experience breathtaking action and immersive gameplay.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Game 2">
+                <h3>Game Title 2</h3>
+                <p>Explore vast open worlds with endless possibilities.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Game 3">
+                <h3>Game Title 3</h3>
+                <p>Dive into the best multiplayer battles and rank up!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-section" id="game-section">
+        <h2>Our Games</h2>
+        <div class="game-list">
+            <div class="game-card" onclick="location.href='game.html';">
+                <img src="https://via.placeholder.com/300" alt="Game A">
+                <h3>AnimX</h3>
+                <p>Engage in epic battles and save the universe.</p>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300" alt="Game B">
+                <h3>Game B</h3>
+                <p>Challenge your skills in this puzzle-solving adventure.</p>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300" alt="Game C">
+                <h3>Game C</h3>
+                <p>Experience the</p>
